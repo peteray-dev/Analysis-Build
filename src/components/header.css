@@ -1,123 +1,143 @@
+.header {
+  width: 1140px;
+  margin: 20px auto 0px;
+  overflow: hidden;
+  /* background-color: aquamarine; */
+}
 
-.header{
-    width: 1140px;
-    margin: 20px auto 0px ;
+.search-bar {
+  /* width: 200px; */
+  float: left;
+  margin: 10px auto 10px;
+}
+
+.right-side-bars {
+  /* width: 200px; */
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-side-bars h4 {
+  margin-top: 20px;
+}
+.sort-bar {
+  margin-left: 10px;
+}
+input {
+  border: none;
+  border: 1px solid;
+  border-radius: 3px;
+}
+input[type='text'] {
+  width: 250px;
+  height: 30px;
+}
+select {
+  width: 150px;
+  height: 30px;
+  border: none;
+  border: 1px solid;
+  border-radius: 3px;
+}
+option {
+  font-size: 14px;
+}
+.notification {
+  background-color: rgb(252, 236, 238);
+  width: 75%;
+  margin: 20px auto 0px;
+}
+.notification p {
+  padding: 20px;
+  text-align: center;
+}
+.filterDetails {
+  width: 1140px;
+  margin: 20px auto 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    width: 800px;
+    margin: 20px auto;
     overflow: hidden;
-    /* background-color: aquamarine; */
-}
-
-.search-bar{
-    /* width: 200px; */
-    float: left;
-    margin: 10px auto 10px;
-}
-
-.right-side-bars{
-    /* width: 200px; */
-    float: right;
+  }
+  .filterDetails {
+    width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+  }
 }
-.right-side-bars h4{
-    margin-top: 20px;
-}
-.sort-bar{
-    margin-left: 10px;
-}
-input{
-    border: none;
-    border: 1px solid; 
-    border-radius: 3px;
-}
-input[type="text"]{
-    width: 250px;
-    height: 30px;
-}
-select{
+
+@media only screen and (max-width: 770px) {
+  .header {
+    width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  .filterDetails {
+    width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+  input[type='text'] {
     width: 150px;
+    height: 25px;
+  }
+  select {
+    width: 100px;
     height: 30px;
-    border: none;
-    border: 1px solid; 
-    border-radius: 3px;
-}
-option{
-    font-size: 14px;
-}
-.notification{
-    background-color: rgb(252, 236, 238);
-    width: 60%; 
-    margin: 20px auto 0px;
-    
-}
-.notification p{
-    padding: 20px;
-    text-align: center;
+  }
+  .notification {
+    width: 85%;
+  }
 }
 
-@media only screen and (max-width: 1024px){
-.header{
-    width: 800px;
-    margin: 20px auto ;
+@media only screen and (max-width: 480px) {
+  .header {
+    width: 300px;
+    margin: 20px auto;
     overflow: hidden;
-}
-}
-
-@media only screen and (max-width: 770px){
-    .header{
-        width: 600px;
-        margin: 20px auto ;
+    display: flex;
+    flex-direction: column;
+  }
+  .filterDetails {
+    width: 300px;
+    margin: 20px auto;
     overflow: hidden;
-    }
-    input[type="text"]{
-        width: 150px;
-        height: 25px;
-    }
-    select{
-        width: 100px;
-        height: 30px;
-    }
-    .notification{
-       
-        width: 80%; 
-        
-        
-    }
-}
+    display: flex;
+    justify-content: space-between;
+  }
 
-@media only screen and (max-width: 480px){
-    .header{
-        width: 300px;
-        margin: 20px auto ;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        
-      
-    }
-    input[type="text"]{
-        width: 200px;
-        height: 30px;
-        margin: 0px auto;
-        justify-content: center;
-    }
-    select{
-        width: 80px;
-        height: 30px;
-    }
-    .right-side-bars{
-        width: 100px;
-    }
-    option{
-        font-size: 12px;
-    }
-  
-    .date{
-        margin-left: 0px;
-    }
-    .notification{
-        width: 90%;
-    }
-    
+  input[type='text'] {
+    width: 200px;
+    height: 30px;
+    margin: 0px auto;
+    justify-content: center;
+  }
+  select {
+    width: 80px;
+    height: 30px;
+  }
+  .right-side-bars {
+    width: 100px;
+  }
+  option {
+    font-size: 8px;
+  }
 
+  .date {
+    margin-left: 0px;
+  }
+  .notification {
+    width: 90%;
+  }
 }
