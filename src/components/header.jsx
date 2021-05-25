@@ -3,6 +3,7 @@ import './header.css';
 import axios from 'axios';
 import Notification from './notification';
 import Templates from './TemplateLists';
+import { BsSearch} from 'react-icons/bs'
 
 class Header extends React.Component {
   state = {
@@ -37,15 +38,13 @@ class Header extends React.Component {
 
   handleChangeTemplate = (event) => {
     const templateCategory = event.target.value;
-    console.log(templateCategory);
+    // console.log(templateCategory);
 
     if(templateCategory === 'All'){
       return this.state.originTemplate
     }
 
-    const filterDropdownRes = this.state.template
-      .slice(0, 100)
-      .filter((item)=>{
+    const filterDropdownRes = this.state.template.filter((item)=>{
         // return item.name.indexOf(templateCategory) !== -1
   
         if( item.category === ''){
@@ -85,7 +84,7 @@ class Header extends React.Component {
 
   handleSortingDate = (e) => {
     const sorting = e.target.value;
-    console.log(sorting);
+    // console.log(sorting);
     const sortingDateRes = this.state.template.sort((a, b) => {
       if (sorting === 'Default') {
         return this.state.template;
@@ -116,7 +115,7 @@ class Header extends React.Component {
         return item;
       }
     });
-    console.log(searchVal);
+    // console.log(searchVal);
     this.setState({
       search: searchVal,
       template: searchWord,
@@ -135,7 +134,8 @@ class Header extends React.Component {
               placeholder="Search Templates"
               value={this.state.search}
               onChange={this.handleSearch}
-            />
+              
+            /><BsSearch />
           </div>
 
           <div className="right-side-bars">

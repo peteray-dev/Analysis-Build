@@ -18,7 +18,7 @@ class Templates extends Component {
     return (
       <>
         <div className="templates-wrapper">
-          {this.props.templateList.slice(0, 100).map((item, key) => {
+          {this.props.templateList.map((item, key) => {
             return (
               <div className="template-column" key={key}>
                 <div className="template-top">
